@@ -1,0 +1,88 @@
+*{
+    margin: 10px;
+    padding: 10px;
+  }
+/* colorhunt.co -- composición de colores */
+.header{
+    background: black;
+}
+    .menu{
+        display: flex;
+        background: grey;
+    }
+        .logo{
+            background:#FF4848;
+            flex: 1 1 auto;
+        }
+        .nav{
+            background:#FF4848;
+            flex: 5 1 auto;
+        }
+        .social{
+            background:#FF4848;
+            flex: 1 1 auto;
+        }
+    .main-text{
+        background: #DF711B;
+    }
+        h1{
+            background: #FFB740;
+        }
+
+.section{
+    background: black;
+    display: flex;
+}
+    .articles{
+        background: #001E6C;
+        flex: 3 1 auto; /*articles actúa como hijo*/
+        display: flex; /*articles actúa com padre*/
+        flex-flow: row wrap; /*articles actúa com padre*/
+    }
+        .article{
+            background: #035397;
+            flex: 1 1 40%;
+        }
+        .articles-nav{
+            background: #5089C6;
+            flex: 1 1 100%;
+
+        }
+    .aside{
+        background: #FF4848;
+        flex: 1 1 auto; /*aside actúa como hijo*/
+    }
+        .advertisement{
+            background: #FFF47D;
+        }
+.footer{
+    background: black;
+}
+    .foot{
+        background: #FFD371;
+    }
+
+/* ADAPTACIÓ A TABLET */
+@media all and (max-width:800px){
+    .section{
+        background: yellow;
+        flex-flow: column;
+    }
+    .article{
+        flex: 1 1 30%;
+    }
+    .articles-nav{
+        flex: 1 1 100%;
+
+    }
+}
+
+/* ADAPTACIÓ A MOVIL */
+@media all and (max-width:400px){
+    .menu{
+        flex-flow: column;
+    }
+    .articles{
+        flex-flow: column;
+    }
+}
