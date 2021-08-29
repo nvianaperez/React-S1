@@ -1,14 +1,17 @@
 *{
     margin: 10px;
     padding: 10px;
+    box-sizing: border-box;
   }
 /* colorhunt.co -- composición de colores */
 .header{
     background: black;
+    margin-bottom: 20px;
 }
     .menu{
         display: flex;
         background: grey;
+        margin-bottom: 20px;
     }
         .logo{
             background:#FF4848;
@@ -32,6 +35,7 @@
 .section{
     background: black;
     display: flex;
+    margin-bottom: 20px;
 }
     .articles{
         background: #001E6C;
@@ -46,7 +50,6 @@
         .articles-nav{
             background: #5089C6;
             flex: 1 1 100%;
-
         }
     .aside{
         background: #FF4848;
@@ -64,32 +67,30 @@
 
 /* ADAPTACIÓ A TABLET */
 @media all and (max-width:1024px){
-    .section{
-        background: yellow;
-        flex-flow: column;
-    }
-    .article{
-        flex: 1 1 30%;
-    }
-    .articles-nav{
-        flex: 1 1 100%;
-
-    }
+.section{
+    background: yellow;
+    flex-flow: column;
+}
+        .article{
+            flex: 1 1 30%;
+        }
+        .articles-nav{
+            flex: 1 1 100%;
+        }
 }
 
 /* ADAPTACIÓ A TABLET LANDSCAPE*/
 @media (max-width:1024px) and (orientation: landscape){
-    .section{
-        background: yellow;
-        flex-flow: column;
-    }
-    .article{
-        flex: 1 1 30%;
-    }
-    .articles-nav{
-        flex: 1 1 100%;
-
-    }
+.section{
+    background: yellow;
+    flex-flow: column;
+}
+        .article{
+            flex: 1 1 30%;
+        }
+        .articles-nav{
+            flex: 1 1 100%;
+        }
 }
 
 /* ADAPTACIÓ A MOVIL */
