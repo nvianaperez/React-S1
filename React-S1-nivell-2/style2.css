@@ -1,39 +1,74 @@
 *{
-    margin: 10px;
+    margin: 3px;
     padding: 10px;
     box-sizing: border-box;
-  }
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
 /* colorhunt.co -- composición de colores */
 .header{
-    background: black;
+    background-image: url(../React-S1-nivell-2/images/fons-capçalera.jpg.jpg);
+    background-repeat: no-repeat;
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
     margin-bottom: 20px;
 }
     .menu{
         display: flex;
-        background: grey;
         margin-bottom: 20px;
+        height: 100px;
+        align-content: center;
     }
         .logo{
-            background:#FF4848;
-            flex: 1 1 auto;
+            background-image: url(../React-S1-nivell-2/images/logo.png.png);
+            background-repeat: no-repeat;
+            background-position: center-top;
+            background-size: contain;
+            flex: 2 1 auto;
         }
         .nav{
-            background:#FF4848;
             flex: 5 1 auto;
         }
+            .nav a{
+                color: grey;
+                font-size: 1.5vw;
+            }
+            .nav a:hover{
+                color: black;
+            }
         .social{
-            background:#FF4848;
             flex: 1 1 auto;
         }
-    .main-text{
-        background: #DF711B;
-    }
+            .social a{
+                color: grey;
+                font-size: 1.5vw;
+                position: relative;
+                top: -20px;
+                right: -20px;
+            }
+            .social a:hover{
+                color: black;
+            }
+ 
         h1{
-            background: #FFB740;
+            font-family: 'Frank Ruhl Libre', serif;
+            text-align: center;
+            font-size: 2.5vw;
+            color: #FF4848;
+            opacity: 0.5;
         }
 
 .section{
-    background: black;
+    background:lightgrey;
     display: flex;
     margin-bottom: 20px;
 }
@@ -59,7 +94,7 @@
             background: #FFF47D;
         }
 .footer{
-    background: black;
+    background:lightgrey;
 }
     .foot{
         background: #FFD371;
@@ -67,6 +102,31 @@
 
 /* ADAPTACIÓ A TABLET */
 @media all and (max-width:1024px){
+.header{
+    min-height: 150px;
+}
+    .menu{
+        display: flex;
+    }
+        .logo{
+            min-width: 30px;
+            flex: 2 1 auto;
+        }
+        .nav{
+            flex: 5 1 auto;
+            margin: 0px 10px;
+            padding: 0px;
+        }
+            .nav a{
+                padding: 0px;
+                font-size: 1.9vw;
+            }
+        .social{
+            flex: 1 1 auto;
+            position: relative;
+            top: -10px;
+            right: -40px;
+        }
 .section{
     background: yellow;
     flex-flow: column;
@@ -78,9 +138,35 @@
             flex: 1 1 100%;
         }
 }
+
 
 /* ADAPTACIÓ A TABLET LANDSCAPE*/
 @media (max-width:1024px) and (orientation: landscape){
+.header{
+    min-height: 150px;
+}
+    .menu{
+        display: flex;
+    }
+        .logo{
+            min-width: 40px;
+            flex: 2 1 auto;
+        }
+        .nav{
+            flex: 5 1 auto;
+            margin: 0px 10px;
+            padding: 0px;
+        }
+            .nav a{
+                padding: 0px;
+                font-size: 1.9vw;
+            }
+        .social{
+            flex: 1 1 auto;
+            position: relative;
+            top: -10px;
+            right: -40px;
+        }
 .section{
     background: yellow;
     flex-flow: column;
@@ -93,11 +179,62 @@
         }
 }
 
+
 /* ADAPTACIÓ A MOVIL */
-@media all and (max-width:480px){
+@media all and (max-width:668px){
+.header{
+    max-height: 250px;
+}
     .menu{
+        position: relative;
+        left: 20px;
+        flex-flow: column wrap;
+        min-height: 200px;
+        align-items: center;
+    }
+        .logo{
+            min-width: 40px;
+            position: relative;
+            left: 30px;
+        }
+        .nav a{
+            font-size: 2.1vw;
+        }
+        .main-text h1{
+            position: relative;
+            top: -50px;
+        }
+        .social{
+            flex: 1 1 auto;
+            position: relative;
+            top: -10px;
+            right: 20px;
+        }
+    .articles{
         flex-flow: column;
     }
+}
+@media all and (max-width:620px){
+        .nav a{
+            font-size: 1.9vw;
+        }
+        .social{
+            flex: 1 1 auto;
+            position: relative;
+            top: -10px;
+            right: 25px;
+        }
+    .articles{
+        flex-flow: column;
+    }
+}
+@media all and (max-width:530px){
+        .social{
+            flex: 1 1 auto;
+            position: relative;
+            top: -10px;
+            right: 35px;
+        }
     .articles{
         flex-flow: column;
     }
