@@ -2,6 +2,7 @@
     margin: 3px;
     padding: 10px;
     box-sizing: border-box;
+    color: grey;
 }
 
 body{
@@ -11,6 +12,12 @@ body{
 
 a{
     text-decoration: none;
+    /* color: grey; -- mejor arriba para que afecte a todos los elementos*/ 
+}
+
+a:hover{  /*DUDA: por qué no funciona con .nav a:hover*/
+    color: black;
+    font-size: 1.5rem;
 }
 
 /* colorhunt.co -- composición de colores */
@@ -44,6 +51,7 @@ a{
             }
             .nav a:hover{
                 color: black;
+                font-size: 1.6vw;
             }
         .social{
             flex: 1 1 auto;
@@ -55,13 +63,17 @@ a{
                 top: -20px;
                 right: -20px;
             }
-            .social a:hover{
+            .social i:hover{
                 color: black;
+                font-size: 1.6vw;
             }
- 
+    .main-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
         h1{
             font-family: 'Frank Ruhl Libre', serif;
-            text-align: center;
             font-size: 2.5vw;
             color: #FF4848;
             opacity: 0.5;
@@ -73,23 +85,61 @@ a{
     margin-bottom: 20px;
 }
     .articles{
-        background: #001E6C;
-        flex: 3 1 auto; /*articles actúa como hijo*/
+        background:rgb(221, 219, 219);
+        flex: 1 1.7 auto; /*articles actúa como hijo*/
         display: flex; /*articles actúa com padre*/
         flex-flow: row wrap; /*articles actúa com padre*/
     }
-        .article{
-            background: #035397;
-            flex: 1 1 40%;
+        .article {
+            flex: 1 1 40%; 
         }
+            .article img{ /*ATENCIÓN: cómo hacer img responsive*/
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            .article h2{
+                background-color:#FF4848;
+                color: lightgray;
+                margin: 0px;
+                padding: auto;
+                border: none;
+                vertical-align: text-bottom;/*DUDA!!*/
+                text-transform: uppercase;
+                font-weight: 700px; /*DUDA!!*/
+            }
+            .article h3{
+                color: lightgray;
+                font-size: 1.1rem;
+                font-weight: 700px; /*DUDA!!*/
+                position: absolute;
+                margin-top: -30px;
+            }
+            .article p{
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+            /* .article a:hover{ -- lo subo arriba
+                color: black;
+                font-size: 1.5vw;
+            } */
         .articles-nav{
-            background: #5089C6;
             flex: 1 1 100%;
+        }
+        .articles-nav:hover{
+            color: black;
+            font-size: 1.5vw;
         }
     .aside{
         background: #FF4848;
         flex: 1 1 auto; /*aside actúa como hijo*/
     }
+        .aside img{
+            width: 100%;
+            height: auto;
+        }
         .advertisement{
             background: #FFF47D;
         }
@@ -128,7 +178,6 @@ a{
             right: -40px;
         }
 .section{
-    background: yellow;
     flex-flow: column;
 }
         .article{
@@ -168,7 +217,6 @@ a{
             right: -40px;
         }
 .section{
-    background: yellow;
     flex-flow: column;
 }
         .article{
