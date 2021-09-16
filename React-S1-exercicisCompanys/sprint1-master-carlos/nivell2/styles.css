@@ -1,0 +1,367 @@
+:root {
+  --text-grey: #808080;
+  --text-header: #ed9da0;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #333;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 25px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+aside,
+footer {
+  margin: 10px;
+  padding: 10px;
+}
+
+.paginas,
+aside div,
+footer div {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* header */
+.header {
+  background-image: url(./images/fonscapçalera.jpg);
+  background-size: cover;
+  background-position-y: 50%;
+  padding: 20px 15px;
+  margin-bottom: 10px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 0;
+  margin-bottom: 3.5em;
+}
+
+.logo {
+  flex: 1 1 auto;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.menu {
+  flex: 5 1 auto;
+}
+
+.menu__links {
+  display: flex;
+  padding: 10px;
+}
+
+.menu__link {
+  display: flex;
+  padding: 0 15px;
+}
+
+.menu__icon {
+  width: 20px;
+  filter: invert(57%) sepia(6%) saturate(3%) hue-rotate(314deg) brightness(87%)
+    contrast(84%);
+}
+
+.menu__text {
+  text-decoration: none;
+  color: var(--text-grey);
+  margin-left: 10px;
+}
+
+.social {
+  flex: 1 1 auto;
+}
+
+.social__icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.social__icon {
+  width: 20px;
+  filter: invert(57%) sepia(6%) saturate(3%) hue-rotate(314deg) brightness(87%)
+    contrast(84%);
+}
+
+.menu__text:hover,
+.social__icon:hover {
+  filter: invert(72%) sepia(10%) saturate(1747%) hue-rotate(309deg)
+    brightness(99%) contrast(89%);
+}
+
+.header__content {
+  background: rgba(0, 0, 0, 0.025);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header__title {
+  margin: 0;
+  color: var(--text-header);
+  font-family: "Lora", serif;
+  font-weight: 500;
+  line-height: 6rem;
+}
+
+.header__title sup {
+  vertical-align: top;
+  font-size: 5rem;
+}
+
+/* main */
+.main-section {
+  background: #dcdcdc;
+  padding: 7px;
+}
+
+.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  background: #ececec;
+  flex-basis: 681px;
+  padding: 7px;
+  margin-bottom: 14px;
+}
+
+.article__header {
+  position: relative;
+  background-size: cover;
+  height: 300px;
+  overflow: hidden;
+}
+
+.article__header--culture {
+  background-image: url(./images/pexels-evgeny-tchebotarev-2187662.jpg);
+}
+.article__header--food {
+  background-image: url(./images/pexels-mat-kedzia-2091013.jpg);
+}
+.article__header--tradition {
+  background-image: url(./images/pexels-evgeny-tchebotarev-2187966.jpg);
+}
+.article__header--city {
+  background-image: url(./images/pexels-aleksandar-pasaric-3402955.jpg);
+}
+
+.article__date {
+  position: absolute;
+  bottom: 47px;
+  margin: 0;
+  padding-left: 10px;
+  color: #d6d2c5;
+  font-weight: 700;
+}
+
+.article__title {
+  position: absolute;
+  bottom: 0px;
+  background-color: #f73f52;
+  color: #ececec;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding-left: 10px;
+  height: 50px;
+  width: 100%;
+  line-height: 5.1rem;
+}
+
+.article__body {
+  padding: 0 20px 5px;
+}
+
+.article__text {
+  color: #444444;
+  font-weight: 500;
+}
+
+.article__link {
+  color: #808080;
+  text-decoration: none;
+}
+
+.article__link:hover {
+  color: var(--text-header);
+  text-decoration: underline;
+}
+
+.paginas {
+  background: #70a3c4;
+  flex: 0 1 100%;
+}
+
+.aside {
+  background: #f73f52;
+}
+
+.publicidad {
+  background: #ffea85;
+}
+
+/* footer */
+.footer {
+  background: #000;
+  display: flex;
+}
+
+.footer__content {
+  background: #e6af2e;
+  flex-basis: 100%;
+}
+
+/* laptop */
+@media screen and (max-width: 1439px) {
+  body {
+    max-width: 1024px;
+  }
+  .article {
+    flex-basis: 473px;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 1023px) {
+  body {
+    max-width: 768px;
+    padding: 15px 25px 40px 20px;
+  }
+
+  .header {
+    background-position-y: 47%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .top-bar {
+    padding-top: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .menu__links {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .menu__link {
+    padding: 0 7px;
+    margin-bottom: 5px;
+  }
+
+  .menu__icon,
+  .social__icon {
+    width: 18px;
+  }
+
+  .menu__text {
+    font-size: 0.8rem;
+  }
+
+  .header__content {
+    padding: 5px 0;
+  }
+
+  .header__title {
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+
+  .header__title sup {
+    font-size: 3rem;
+  }
+
+  .article {
+    flex-basis: 348px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 425px;
+    padding: 7px 10px 5px;
+  }
+
+  .header {
+    background-position: center center;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5em;
+  }
+
+  .logo img {
+    width: 45px;
+  }
+
+  .menu__links {
+    justify-content: center;
+  }
+
+  .social__icons {
+    flex-direction: row;
+    height: auto;
+    width: 70px;
+  }
+
+  .header__title {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .header__title sup {
+    font-size: 4rem;
+  }
+
+  .articulos {
+    flex-direction: column;
+  }
+
+  .paginas {
+    background: #a3ddcb;
+  }
+
+  .aside {
+    background: #fd7b54;
+  }
+
+  .publicidad {
+    background: #fdb36b;
+  }
+
+  .footer__content {
+    background: #fdc764;
+  }
+}

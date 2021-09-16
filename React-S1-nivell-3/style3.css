@@ -1,0 +1,86 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: grey;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{ 
+    color: black;
+    font-size: 1.5rem;
+}
+
+/***** GRID *****/
+.header{
+    grid-area: header;
+    background-color: black;
+
+}
+.header{
+    display: grid;
+    grid-template-areas: 'menu menu menu menu menu menu'
+                         'main-text main-text main-text main-text main-text main-text'
+}
+    .menu{
+        background-color: red;
+        grid-area: menu;
+        padding: 5px;
+        height: auto;
+    }
+    .menu{
+        display: flex;
+    }
+        .logo{
+            background-color: grey;
+            flex: 1 1 auto;
+        }
+        .nav{
+            background-color: grey;
+            flex: 3 1 auto;  
+        }
+        .social{
+            background-color: grey;
+            flex: 1 1 auto;
+        }
+    .main-text{
+        background-color: green;
+        grid-area: main-text;
+        padding: 5px;
+        height: auto;
+    }
+        h1{
+            background-color: grey; 
+        }
+.section{
+    grid-area: section;
+    background-color: black;
+}
+.section{
+    display: grid;
+    grid-template-areas: 'article article article article aside aside'
+                          'articles-nav articles-nav articles-nav articles-nav articles-nav articles-nav'
+}
+    .article{
+        background-color: red;
+        grid-area: article;
+        padding: 5px;
+    }
+    .aside{
+        background-color:green;
+        grid-area: aside;
+        padding: 5px;
+        height: auto;
+    }
+   
+
+.footer{
+    background-color: black;
+    display: grid;
+    grid-template-areas: 'foot foot foot foot foot foot'
+}
